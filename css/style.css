@@ -11,6 +11,7 @@
 }
 .header__title {
   font-size: 30px;
+  letter-spacing: 1.5px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -23,6 +24,7 @@
 .nav__ul {
   display: flex;
   flex-direction: row;
+  letter-spacing: 1.5px;
 }
 .nav__li {
   padding: 20px;
@@ -32,11 +34,76 @@
   color: #dddddd;
 }
 
+.main-container {
+  height: 80vh;
+  width: 100vw;
+}
+
 .main-container-logo {
   width: 100%;
   height: 80vh;
   object-fit: cover;
   object-position: center;
+}
+
+.main__title {
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+.main__p {
+  font-size: 16px;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  padding: 5px;
+}
+.main__dd {
+  font-size: 16px;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  padding: 5px;
+}
+.main__dt {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+.main__pre {
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 1.1px;
+  background-color: #d8d8d8;
+}
+.main__comment {
+  background-color: rgba(245, 57, 204, 0.89);
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 30px;
+  padding: 15px;
+}
+.main__links {
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 50px;
+}
+.main__link {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 20px;
+  background-color: #d8d8d8;
+  color: rgba(245, 57, 204, 0.89);
+  transition: 0.3s;
+  border-radius: 5%;
+}
+.main__link:hover {
+  background-color: rgba(245, 57, 204, 0.89);
+  color: #303030;
 }
 
 .footer {
@@ -53,10 +120,7 @@
   color: #dddddd;
   margin: 0;
   font-size: 16px;
-}
-
-.main-content {
-  height: 80vh;
+  letter-spacing: 1.5px;
 }
 
 /*# sourceMappingURL=style.css.map */
