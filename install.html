@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sass Project</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="top-container">
+    <header class="header">
+      <h1 class="header__title">Sass Project</h1>
+    </header>
+    <nav class="nav">
+      <ul class="nav__ul">
+        <li class="nav__li"><a href="index.html">Home</a></li>
+        <li class="nav__li"><a href="about.html">About</a></li>
+        <li class="nav__li"><a href="install.html">How to Install</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="main-content">
+    <h2>Command line</h2>
+    <p>
+      When you install Sass on the command line, you'll be able to run the 
+      <code>sass</code>
+      executable to compile 
+      <code>.sass</code>
+      and 
+      <code>.scss</code>
+      files to
+      <code>.css</code>
+      files. For example:
+    </p>
+    <pre><code>sass source/stylesheets/index.scss build/stylesheets/index.css</code></pre>
+    <dl>
+      <dt>
+        Install Anywhere (Standalone)
+      </dt>
+      <dd> You can install Sass on Windows, Mac, or Linux by downloading the package for your operating system 
+        <a href="https://github.com/sass/dart-sass/releases/tag/1.32.12">from Github.</a>
+        That’s all—there are no external dependencies and nothing else you need to install. 
+      </dd>
+      <dd>
+        <p> If you use Node.js, you can also install Sass using npm by running</p>
+        <pre>npm install -g sass</pre>
+        However, please note  that this will install the pure JavaScript implementation of Sass, which runs somewhat slower than the other options listed here. But it has the same interface, so it’ll be easy to swap in another implementation later if you need a bit more speed! 
+      </dd>
+      <dt>Install on Windows (Chocolatey)</dt>
+      <dd>
+        <p>If you use the Chocolatey package manager for Windows, you can install Dart Sass by running</p>
+        <pre>choco install sass</pre>
+      </dd>
+      <dt>Install on Mac OS X or Linux (Homebrew)</dt>
+      <dd>
+        <p>If you use the Homebrew package manager for Mac OS X or Linux, you can install Dart Sass by running</p>
+        <pre>brew install sass/sass/sass</pre>
+      </dd>
+    </dl>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__p"> 2021 Tiago Berwanger. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

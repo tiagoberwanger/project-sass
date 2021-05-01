@@ -1,17 +1,24 @@
+//color variables
+$purple: rgba(245, 57, 204, 0.89);
+$grey: rgb(48, 48, 48);
+$ice: rgb(221, 221, 221);
 
+//sass styles & nesting
 .top-container {
-  background-color:rgb(48, 48, 48);
+  background-color: $grey;
+  position: relative;
+  bottom: 100;
 }
 
 .header {
-  color: rgba(245, 57, 204, 0.89);
+  color: $purple;
   text-align: center;
   padding-top: 20px;
-}
 
-.header .header-title {
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
+  &__title {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 }
 
 .nav {
@@ -19,25 +26,46 @@
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-}
 
-.nav .nav-ul {
-  display: flex;
-  flex-direction: row;
-}
+  &__ul {
+    display: flex;
+    flex-direction: row;
+  }
 
-.nav .nav-ul .nav-li{
-  padding: 20px;
-}
+  &__li{
+    padding: 20px;
+  }
 
-.nav .nav-ul .nav-li a{
-  text-decoration: none;
-  color: white;
+  &__li a{
+    text-decoration: none;
+    color: $ice;
+  }
 }
 
 .main-container-logo {
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
+}
+
+.footer {
+  margin: 0;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: $grey;
+
+  &__p {
+    color: $ice;
+    margin: 0;
+    font-size: 16px;
+  }
+}
+
+.main-content {
+  height: 80vh;
 }
