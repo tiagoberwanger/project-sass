@@ -1,0 +1,27 @@
+
+.footer {
+  margin: 0;
+  text-align: center;
+  padding: 20px 0;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: $dark-grey;
+  position:fixed;
+  bottom:0;
+  width:100%;
+
+  &__p {
+    color: $ice;
+    margin: 0;
+    letter-spacing: 1.5px;
+    @include for-phone-only {
+      font-size: 16px;
+    }
+    @include for-tablet-only {
+      font-size: 20px;
+    }
+    @include for-desktop-only {
+      font-size: 24px;
+    }
+  }
+}

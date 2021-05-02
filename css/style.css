@@ -1,7 +1,5 @@
-.top-container {
-  background-color: #303030;
-  position: relative;
-  bottom: 100;
+.main__link {
+  text-decoration: none;
 }
 
 .header {
@@ -17,12 +15,14 @@
 
 .nav {
   display: flex;
+  justify: center;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
 .nav__ul {
   display: flex;
+  justify: center;
   flex-direction: row;
   letter-spacing: 1.5px;
 }
@@ -34,9 +34,60 @@
   color: #dddddd;
 }
 
-.main-container {
-  height: 80vh;
-  width: 100vw;
+.footer {
+  margin: 0;
+  text-align: center;
+  padding: 20px 0;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #303030;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer__p {
+  color: #dddddd;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+@media (max-width: 767.98px) {
+  .footer__p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  .footer__p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .footer__p {
+    font-size: 24px;
+  }
+}
+
+.top-container {
+  background-color: #303030;
+  position: relative;
+  bottom: 100;
+}
+
+@media (max-width: 767.98px) {
+  .main-container {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  .main-container {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media (min-width: 1400px) {
+  .main-container {
+    width: 84%;
+    margin-left: 8%;
+  }
 }
 
 .main-container-logo {
@@ -47,39 +98,109 @@
 }
 
 .main__title {
-  font-size: 24px;
   text-align: center;
   letter-spacing: 2px;
   padding: 10px;
 }
+@media (max-width: 767.98px) {
+  .main__title {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  .main__title {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1400px) {
+  .main__title {
+    font-size: 36px;
+  }
+}
 .main__p {
-  font-size: 16px;
   text-align: justify;
   letter-spacing: 1.5px;
   padding: 5px;
+}
+@media (max-width: 767.98px) {
+  .main__p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  .main__p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .main__p {
+    font-size: 24px;
+  }
 }
 .main__dd {
-  font-size: 16px;
   text-align: justify;
   letter-spacing: 1.5px;
   padding: 5px;
 }
+@media (max-width: 767.98px) {
+  .main__dd {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  .main__dd {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1400px) {
+  .main__dd {
+    font-size: 22px;
+  }
+}
 .main__dt {
-  font-size: 16px;
   text-align: center;
   font-weight: bold;
   padding: 10px;
 }
+@media (max-width: 767.98px) {
+  .main__dt {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  .main__dt {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .main__dt {
+    font-size: 24px;
+  }
+}
 .main__pre {
-  font-size: 16px;
   text-align: center;
   padding: 10px;
   letter-spacing: 1.1px;
+  max-width: 100%;
   background-color: #d8d8d8;
+}
+@media (max-width: 767.98px) {
+  .main__pre {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  .main__pre {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1400px) {
+  .main__pre {
+    font-size: 20px;
+  }
 }
 .main__comment {
   background-color: rgba(245, 57, 204, 0.89);
-  font-size: 26px;
   font-weight: bold;
   color: black;
   text-align: center;
@@ -87,40 +208,51 @@
   margin: 30px;
   padding: 15px;
 }
+@media (max-width: 767.98px) {
+  .main__comment {
+    font-size: 26px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  .main__comment {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1400px) {
+  .main__comment {
+    font-size: 38px;
+  }
+}
 .main__links {
   text-align: center;
   letter-spacing: 2px;
   margin-top: 50px;
 }
 .main__link {
-  text-decoration: none;
-  font-size: 18px;
   padding: 20px;
   background-color: #d8d8d8;
   color: rgba(245, 57, 204, 0.89);
   transition: 0.3s;
   border-radius: 5%;
 }
+@media (max-width: 767.98px) {
+  .main__link {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  .main__link {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .main__link {
+    font-size: 22px;
+  }
+}
 .main__link:hover {
   background-color: rgba(245, 57, 204, 0.89);
   color: #303030;
-}
-
-.footer {
-  margin: 0;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
-  background-color: #303030;
-}
-.footer__p {
-  color: #dddddd;
-  margin: 0;
-  font-size: 16px;
-  letter-spacing: 1.5px;
 }
 
 /*# sourceMappingURL=style.css.map */

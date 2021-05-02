@@ -4,6 +4,31 @@ $dark-grey: rgb(48, 48, 48);
 $light-grey: rgb(216, 216, 216);
 $ice: rgb(221, 221, 221);
 
+//placeholder selector
+%no-decoration {text-decoration: none;}
+
+//mixin selector
+@mixin flexbox ($property, $justify) {
+  display: flex;
+  #{$property}: $justify //propriedade de conteúdo variável de acordo com o style
+}
+
+@mixin for-phone-only {
+  @media (max-width: 767.98px) { @content;}
+}
+
+@mixin for-tablet-only {
+  @media (min-width: 768px) and (max-width: 1399.98px) { @content;}
+}
+
+@mixin for-desktop-only {
+  @media (min-width: 1400px) { @content;}
+}
+
+@import 'header', 'footer';
+
+// _______________________________________________
+
 //sass styles & nesting
 .top-container {
   background-color: $dark-grey;
@@ -11,43 +36,19 @@ $ice: rgb(221, 221, 221);
   bottom: 100;
 }
 
-.header {
-  color: $purple;
-  text-align: center;
-  padding-top: 20px;
-
-  &__title {
-    font-size: 30px;
-    letter-spacing: 1.5px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-
-  &__ul {
-    display: flex;
-    flex-direction: row;
-    letter-spacing: 1.5px;
-  }
-
-  &__li{
-    padding: 20px;
-  }
-
-  &__li a{
-    text-decoration: none;
-    color: $ice;
-  }
-}
-
 .main-container {
-  height: 80vh;
-  width: 100vw;
+  
+  @include for-phone-only {
+    width: 100%;
+  }
+  @include for-tablet-only {
+    width: 90%;
+    margin-left:5%;
+  }
+  @include for-desktop-only {
+    width: 84%;
+    margin-left:8%;
+  }
 }
 
 .main-container-logo {
@@ -59,50 +60,99 @@ $ice: rgb(221, 221, 221);
 
 .main {
   &__title {
-    font-size: 24px;
     text-align: center;
     letter-spacing: 2px;
     padding: 10px;
+    @include for-phone-only {
+      font-size: 24px;
+    }
+    @include for-tablet-only {
+      font-size: 30px;
+    }
+    @include for-desktop-only {
+      font-size: 36px;
+    }
   }
 
   &__p {
-    font-size: 16px;
     text-align: justify;
     letter-spacing: 1.5px;
     padding: 5px;
+    @include for-phone-only {
+      font-size: 16px;
+    }
+    @include for-tablet-only {
+      font-size: 20px;
+    }
+    @include for-desktop-only {
+      font-size: 24px;
+    }
   }
 
   &__dd {
-    font-size: 16px;
     text-align: justify;
     letter-spacing: 1.5px;
     padding: 5px;
+    @include for-phone-only {
+      font-size: 14px;
+    }
+    @include for-tablet-only {
+      font-size: 18px;
+    }
+    @include for-desktop-only {
+      font-size: 22px;
+    }
   }
 
   &__dt {
-    font-size: 16px;
     text-align: center;
     font-weight: bold;
     padding: 10px;
+    @include for-phone-only {
+      font-size: 16px;
+    }
+    @include for-tablet-only {
+      font-size: 20px;
+    }
+    @include for-desktop-only {
+      font-size: 24px;
+    }
   }
 
   &__pre {
-    font-size: 16px;
     text-align: center;
     padding: 10px;
     letter-spacing: 1.1px;
+    max-width: 100%;
     background-color: $light-grey;
+    @include for-phone-only {
+      font-size: 12px;
+    }
+    @include for-tablet-only {
+      font-size: 16px;
+    }
+    @include for-desktop-only {
+      font-size: 20px;
+    }
   }
 
   &__comment {
     background-color: $purple;
-    font-size: 26px;
     font-weight: bold;
     color: black;
     text-align: center;
     letter-spacing: 2px;
     margin: 30px;
     padding: 15px;
+    @include for-phone-only {
+      font-size: 26px;
+    }
+    @include for-tablet-only {
+      font-size: 32px;
+    }
+    @include for-desktop-only {
+      font-size: 38px;
+    }
   }
 
   &__links {
@@ -112,13 +162,21 @@ $ice: rgb(221, 221, 221);
   }
 
   &__link {
-    text-decoration: none;
-    font-size: 18px;
     padding: 20px;
     background-color: $light-grey;
     color: $purple;
     transition: 0.3s;
     border-radius: 5%;
+    @include for-phone-only {
+      font-size: 18px;
+    }
+    @include for-tablet-only {
+      font-size: 20px;
+    }
+    @include for-desktop-only {
+      font-size: 22px;
+    }
+    @extend %no-decoration;
 
     &:hover {
       background-color: $purple;
@@ -127,20 +185,3 @@ $ice: rgb(221, 221, 221);
   }
 }
 
-.footer {
-  margin: 0;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
-  background-color: $dark-grey;
-
-  &__p {
-    color: $ice;
-    margin: 0;
-    font-size: 16px;
-    letter-spacing: 1.5px;
-  }
-}
