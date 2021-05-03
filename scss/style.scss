@@ -25,7 +25,7 @@ $ice: rgb(221, 221, 221);
   @media (min-width: 1400px) { @content;}
 }
 
-@import 'header', 'footer';
+@import 'header', 'footer', 'contact';
 
 // _______________________________________________
 
@@ -184,4 +184,5 @@ $ice: rgb(221, 221, 221);
     }
   }
 }
+
 

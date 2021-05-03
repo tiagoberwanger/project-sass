@@ -2,13 +2,21 @@
 .footer {
   margin: 0;
   text-align: center;
-  padding: 20px 0;
   left: 50%;
   transform: translate(-50%);
   background-color: $dark-grey;
   position:fixed;
   bottom:0;
   width:100%;
+  @include for-phone-only {
+    padding: 5px 0;
+  }
+  @include for-tablet-only {
+    padding: 25px 0;
+  }
+  @include for-desktop-only {
+    padding: 35px 0;
+  }
 
   &__p {
     color: $ice;
